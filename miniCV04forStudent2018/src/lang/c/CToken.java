@@ -10,6 +10,8 @@ public class CToken extends SimpleToken {
 	public static final int TK_AMP			= 6;				// &
 	public static final int TK_LPAR			= 7;				// (
 	public static final int TK_RPAR			= 8;				// )
+	public static final int TK_LBRA			= 9;				// [
+	public static final int TK_RBRA			= 10;				// ]
 
 	public CToken(int type, int lineNo, int colNo, String s) {
 		super(type, lineNo, colNo, s);

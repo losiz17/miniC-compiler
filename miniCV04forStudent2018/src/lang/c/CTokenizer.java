@@ -112,6 +112,18 @@ public class CTokenizer extends Tokenizer<CToken, CParseContext> {
 						startCol = colNo - 1;
 						text.append(ch);
 						state = 19;
+					}else if(ch =='['){
+						startCol = colNo - 1;
+						text.append(ch);
+						state = 20;
+					}else if(ch ==']'){
+						startCol = colNo - 1;
+						text.append(ch);
+						state = 21;
+					}else if(ch >='a' && ch<='z' || ch >='A' && ch<='Z'){//identの始まり
+						startCol = colNo - 1;
+						text.append(ch);
+						state = 22;
 					}else {            // ヘンな文字を読んだ
 						startCol = colNo - 1;
 						text.append(ch);
@@ -286,7 +298,27 @@ public class CTokenizer extends Tokenizer<CToken, CParseContext> {
 					tk = new CToken(CToken.TK_RPAR, lineNo, startCol, text.toString());
 					accept = true;
 					break;
-
+				case 20:
+					tk = new CToken(CToken.TK_LBRA, lineNo, startCol, "[");
+					accept = true;
+					break;
+				case 21:
+					tk = new CToken(CToken.TK_RBRA, lineNo, startCol, "]");
+					accept = true;
+					break;
+				case 22:
+					ch = readChar();
+					if( (ch >= '0' && ch <= '9') || (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z') ){
+						text.append(ch);
+						state = 22;
+					}else{
+						backChar(ch);
+						state = 23;
+					}
+					break;
+				case 23://ident受理
+					tk = new CToken(CToken.TK_IDENT, lineNo, startCol, text.toString());
+					accept = true;
 
 			}
 		}
