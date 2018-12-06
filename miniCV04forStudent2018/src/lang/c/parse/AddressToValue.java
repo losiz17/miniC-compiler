@@ -5,30 +5,20 @@ import java.io.PrintStream;
 import lang.*;
 import lang.c.*;
 
-public class Primary extends CParseRule {
-    // primary ::= primaryMult | variable
+public class AddressToValue extends CParseRule {
+    // addressToVlaue ::= primary
     private CParseRule number;
-    public Primary(CParseContext pcx) {
+    public AddressToValue(CParseContext pcx) {
     }
     public static boolean isFirst(CToken tk) {
-        return PrimaryMult.isFirst(tk) | Variable.isFirst(tk);
+        return Primary.isFirst(tk);
     }
     public void parse(CParseContext pcx) throws FatalErrorException {
         // ここにやってくるときは、必ずisFirst()が満たされている
         CTokenizer ct = pcx.getTokenizer();
         CToken tk = ct.getCurrentToken(pcx);
-        if(PrimaryMult.isFirst(tk)){
-            number = new PrimaryMult(pcx);
-            number.parse(pcx);
-        }
-        else if(Variable.isFirst(tk)){
-            number = new Variable(pcx);
-            number.parse(pcx);
-        }
-
-    }
-    public CParseRule getprimary(){//親クラスに渡すためのゲッター
-        return number;
+        number = new Primary(pcx);
+        number.parse(pcx);
     }
 
     public void semanticCheck(CParseContext pcx) throws FatalErrorException {
@@ -41,8 +31,12 @@ public class Primary extends CParseRule {
 
     public void codeGen(CParseContext pcx) throws FatalErrorException {
         PrintStream o = pcx.getIOContext().getOutStream();
-        o.println(";;; Primary starts");
-        if (number != null) { number.codeGen(pcx); }
-        o.println(";;; Primary completes");
+        o.println(";;; addressToValue starts");
+        if (number != null) {
+            number.codeGen(pcx);
+            o.println("\tMOV\t -(R6),R0\t; adressToValue: アドレス先の値を取り出して、スタックに積む");
+            o.println("\tMOV\t (R0),(R6)+\t; adressToValue: ");
+        }
+        o.println(";;; addressToValue completes");
     }
 }

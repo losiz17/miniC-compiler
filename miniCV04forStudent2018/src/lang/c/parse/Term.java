@@ -82,10 +82,12 @@ class termMult extends CParseRule {
 		// 掛け算の型計算規則
 		final int s[][] = {
 //				ポインタ*整数＝err	ポインタ*ポインタ＝ERR
-				//右辺	T_err			T_int			T_pint
-				{	CType.T_err,	CType.T_err,	CType.T_err },	// T_err
-				{	CType.T_err,	CType.T_int,	CType.T_err },	// T_int
-				{	CType.T_err,	CType.T_err,	CType.T_err },	// T_pint
+				//右辺	T_err			T_int			T_pint		T_int_array		T_pint_array
+				{	CType.T_err,	CType.T_err,	CType.T_err,	CType.T_err,	CType.T_err  },	// T_err
+				{	CType.T_err,	CType.T_int,	CType.T_err,	CType.T_err,	CType.T_err  },	// T_int
+				{	CType.T_err,	CType.T_err,	CType.T_err,	CType.T_err,	CType.T_err  },	// T_pint
+				{	CType.T_err,	CType.T_err,	CType.T_err,	CType.T_err,	CType.T_err  },	// T_pint
+				{	CType.T_err,	CType.T_err,	CType.T_err,	CType.T_err,	CType.T_err  },	// T_pint
 				// 左辺
 		};
 		int lt = 0, rt = 0;
@@ -152,10 +154,12 @@ class termDiv extends CParseRule {
 		// 割り算の型計算規則
 		final int s[][] = {
 //
-				//右辺		T_err			T_int			T_pint
-				{	CType.T_err,	CType.T_err,	CType.T_err },	// T_err
-				{	CType.T_err,	CType.T_int,	CType.T_err },	// T_int
-				{	CType.T_err,	CType.T_err,	CType.T_err },	// T_pint
+				//右辺		T_err			T_int			T_pint		T_int_array		T_pint_array
+				{	CType.T_err,	CType.T_err,	CType.T_err,	CType.T_err,	CType.T_err },	// T_err
+				{	CType.T_err,	CType.T_int,	CType.T_err,	CType.T_err,	CType.T_err },	// T_int
+				{	CType.T_err,	CType.T_err,	CType.T_err,	CType.T_err,	CType.T_err },	// T_pint
+				{	CType.T_err,	CType.T_err,	CType.T_err,	CType.T_err,	CType.T_err  },	// T_int_array
+				{	CType.T_err,	CType.T_err,	CType.T_err,	CType.T_err,	CType.T_err  },	// T_pint_array
 				// 左辺
 		};
 		int lt = 0, rt = 0;
