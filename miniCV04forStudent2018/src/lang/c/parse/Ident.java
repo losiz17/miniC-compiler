@@ -23,9 +23,9 @@ public class Ident extends CParseRule {
 
     public void semanticCheck(CParseContext pcx) throws FatalErrorException {
 
-//				this.setCType(CType.getCType(CType.T_int));
+				this.setCType(CType.getCType(CType.T_int));
 //				this.setCType(CType.getCType(CType.T_pint));
-				this.setCType(CType.getCType(CType.T_int_array));
+//				this.setCType(CType.getCType(CType.T_int_array));
 //        this.setCType(CType.getCType(CType.T_pint_array));
         this.setConstant(false);
     }

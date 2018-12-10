@@ -1,27 +1,34 @@
 package lang.c.parse;
 
 import java.io.PrintStream;
+
 import lang.*;
 import lang.c.*;
 
 import java.util.ArrayList;
 
 public class Program extends CParseRule {
-	// program ::= expression EOF
+	// program ::= {declaration}{statement} EOF
 	private CParseRule program;
 	private ArrayList<CParseRule> list;
-
 	public Program(CParseContext pcx) {
 		list = new ArrayList<CParseRule>();
 	}
 	public static boolean isFirst(CToken tk) {
-		return Expression.isFirst(tk);
+		return Declaration.isFirst(tk);
 	}
 	public void parse(CParseContext pcx) throws FatalErrorException {
 		// ここにやってくるときは、必ずisFirst()が満たされている
 
 		CTokenizer ct = pcx.getTokenizer();
 		CToken tk = ct.getCurrentToken(pcx);
+//		System.out.println("here");
+		while(Declaration.isFirst(tk)){
+			program = new Declaration(pcx);
+			program.parse(pcx);
+			list.add(program);
+			tk = ct.getCurrentToken(pcx);
+		}
 		while(Statement.isFirst(tk)){
 			program = new Statement(pcx);
 			program.parse(pcx);
@@ -46,11 +53,13 @@ public class Program extends CParseRule {
 		o.println("\t. = 0x100");
 		o.println("\tJMP\t__START\t; ProgramNode: 最初の実行文へ");
 		// ここには将来、宣言に対するコード生成が必要
+
 		if (program != null) {
 			o.println("__START:");
 			o.println("\tMOV\t#0x1000, R6\t; ProgramNode: 計算用スタック初期化");
-			for(CParseRule rule:list){
-				rule.codeGen(pcx);
+			for (int i= 0; i < list.size(); i++) {
+				//System.out.println("here");
+				list.get(i).codeGen(pcx);
 			}
 			o.println("\tMOV\t-(R6), R0\t; ProgramNode: 計算結果確認用");
 		}
