@@ -2,39 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a23e395-2e92-4a7c-a0ed-5fc019ecd323" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/lang/c/CSymbolTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lang/c/CSymbolTableEntry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lang/c/parse/ConstDecl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lang/c/parse/ConstItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lang/c/parse/DeclItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lang/c/parse/Declaration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lang/c/parse/IntDecl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../miniCV04forStudent2018/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../miniCV04forStudent2018/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../miniCV04forStudent2018/out/production/miniCV01forStudent2018/lang/c/parse/Ident.class" beforeDir="false" afterPath="$PROJECT_DIR$/../miniCV04forStudent2018/out/production/miniCV01forStudent2018/lang/c/parse/Ident.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../miniCV04forStudent2018/out/production/miniCV01forStudent2018/lang/c/test.c" beforeDir="false" afterPath="$PROJECT_DIR$/../miniCV04forStudent2018/out/production/miniCV01forStudent2018/lang/c/test.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../miniCV04forStudent2018/src/lang/c/parse/Ident.java" beforeDir="false" afterPath="$PROJECT_DIR$/../miniCV04forStudent2018/src/lang/c/parse/Ident.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../miniCV04forStudent2018/src/lang/c/test.c" beforeDir="false" afterPath="$PROJECT_DIR$/../miniCV04forStudent2018/src/lang/c/test.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../miniCV05forStudent2018/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../miniCV05forStudent2018/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../miniCV05forStudent2018/out/production/miniCV01forStudent2018/lang/c/parse/Ident.class" beforeDir="false" afterPath="$PROJECT_DIR$/../miniCV05forStudent2018/out/production/miniCV01forStudent2018/lang/c/parse/Ident.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../miniCV05forStudent2018/out/production/miniCV01forStudent2018/lang/c/test.c" beforeDir="false" afterPath="$PROJECT_DIR$/../miniCV05forStudent2018/out/production/miniCV01forStudent2018/lang/c/test.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../miniCV05forStudent2018/src/lang/c/parse/Ident.java" beforeDir="false" afterPath="$PROJECT_DIR$/../miniCV05forStudent2018/src/lang/c/parse/Ident.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../miniCV05forStudent2018/src/lang/c/test.c" beforeDir="false" afterPath="$PROJECT_DIR$/../miniCV05forStudent2018/src/lang/c/test.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/miniCV01forStudent2018/lang/c/CParseContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/miniCV01forStudent2018/lang/c/CParseContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/miniCV01forStudent2018/lang/c/CToken.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/miniCV01forStudent2018/lang/c/CToken.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/miniCV01forStudent2018/lang/c/CTokenRule.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/miniCV01forStudent2018/lang/c/CTokenRule.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/miniCV01forStudent2018/lang/c/CTokenizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/miniCV01forStudent2018/lang/c/CTokenizer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/miniCV01forStudent2018/lang/c/parse/Ident.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/miniCV01forStudent2018/lang/c/parse/Ident.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/miniCV01forStudent2018/lang/c/parse/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/miniCV01forStudent2018/lang/c/parse/Program.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/miniCV01forStudent2018/lang/c/test.c" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/miniCV01forStudent2018/lang/c/test.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lang/c/CParseContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lang/c/CParseContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lang/c/CToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lang/c/CToken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lang/c/CTokenRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lang/c/CTokenRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lang/c/CTokenizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lang/c/CTokenizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lang/c/parse/Ident.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lang/c/parse/Ident.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lang/c/parse/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lang/c/parse/Program.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lang/c/parse/StatementAssign.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lang/c/parse/StatementAssign.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lang/c/test.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/lang/c/test.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../情報科学実験Ⅱ（2018.9.12版）.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../情報科学実験Ⅱ（2018.9.12版）.pdf" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -130,10 +98,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="949" />
-    <option name="width" value="980" />
-    <option name="height" value="1211" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1680" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -187,8 +154,8 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544430916437" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544605303009" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../miniCV07forStudent2018" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -246,15 +213,15 @@
       <workItem from="1544155384828" duration="6701000" />
       <workItem from="1544171893337" duration="3922000" />
       <workItem from="1544422365099" duration="5970000" />
+      <workItem from="1544507971125" duration="117000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60720000" />
+    <option name="totallyTimeSpent" value="60842000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="815" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16194332" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -265,7 +232,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.44363105" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.44363105" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
